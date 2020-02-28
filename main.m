@@ -86,12 +86,12 @@ for var = start:gap:final
 		data_x = x;
         data_y = y;
 
-		%Randomly select test data and labels
+		% Randomly select test data and labels
         index_m = randperm(n);  
         x_test = data_x(index_m(1:test_num),:);
         y_test = data_y(index_m(1:test_num));	
 
-        %Randomly select M training data and labels (no test data is included)
+        % Randomly select M training data and labels (no test data is included)
         data_x(index_m(1:test_num),:) = [];
         data_y(index_m(1:test_num),:) = [];
         index_train = randperm(size(data_x,1));
